@@ -1,0 +1,12 @@
+streamlit==1.35.0
+earthengine-api==0.1.401
+pandas==2.2.2
+numpy==1.26.4
+scikit-learn==1.5.0
+lightgbm==4.3.0
+matplotlib==3.9.0
+geopandas==0.14.4
+joblib==1.4.2
+folium==0.17.0
+streamlit-folium==0.20.0
+
