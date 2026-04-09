@@ -8,4 +8,4 @@ matplotlib==3.9.0
 joblib==1.4.2
 folium==0.17.0
 streamlit-folium==0.20.0
-
+pillow==11.1.0
