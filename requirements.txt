@@ -1,11 +1,10 @@
-streamlit==1.35.0
+streamlit==1.43.2
 earthengine-api==0.1.401
-pandas==2.1.4
-numpy==1.26.4
-scikit-learn==1.5.0
+pandas==2.2.3
+numpy==2.2.4
+scikit-learn==1.6.1
 lightgbm==4.3.0
-matplotlib==3.9.0
+matplotlib==3.10.1
 joblib==1.4.2
 folium==0.17.0
 streamlit-folium==0.20.0
-pillow==11.1.0
