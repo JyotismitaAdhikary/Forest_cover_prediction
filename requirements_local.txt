@@ -1,0 +1,7 @@
+earthengine-api==0.1.401
+pandas==2.1.4
+numpy==1.26.4
+scikit-learn==1.5.0
+lightgbm==4.3.0
+matplotlib==3.9.0
+joblib==1.4.2

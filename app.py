@@ -56,26 +56,21 @@ with st.sidebar:
         "forest_threshold": forest_threshold,
         "cloud_threshold": cloud_threshold,
     })
-
-    st.markdown("---")
-    st.subheader("🔑 GEE Authentication")
-    st.markdown(
-        "Paste your GEE service account JSON key below.\n\n"
-        "[How to get a service account key →](https://developers.google.com/earth-engine/guides/service_account)"
-    )
-    gee_key_input = st.text_area("Service Account JSON Key", height=120, placeholder='{"type": "service_account", ...}')
-
     if st.button("🔌 Connect to GEE", use_container_width=True):
-        if not gee_key_input.strip():
-            st.error("Please paste your GEE service account JSON key.")
-        else:
-            try:
-                key_dict = json.loads(gee_key_input)
-                initialize_gee(key_dict)
-                st.session_state.gee_ready = True
-                st.success("Connected to GEE!")
-            except Exception as e:
-                st.error(f"Connection failed: {e}")
+    try:
+        ee.Initialize()
+        st.session_state.gee_ready = True
+        st.success("Connected to GEE!")
+    except Exception:
+        try:
+            ee.Authenticate()
+            ee.Initialize()
+            st.session_state.gee_ready = True
+            st.success("Connected to GEE!")
+        except Exception as e:
+            st.error(f"Connection failed: {e}")
+
+    
 
     st.markdown("---")
     st.caption("Built with Google Earth Engine + scikit-learn + LightGBM")
