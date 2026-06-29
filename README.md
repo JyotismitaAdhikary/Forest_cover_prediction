@@ -152,6 +152,6 @@ matplotlib==3.9.0
 joblib==1.4.2
 ```
 
-The notebook additionally needs Jupyter (`pip install notebook`).
+The notebook additionally needs Jupyter (`pip install jupyte notebook`).
 
 ---
